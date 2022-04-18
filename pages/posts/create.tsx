@@ -1,15 +1,13 @@
-import { useRouter } from 'next/router'
 import React from 'react'
 
-export interface PostDetailageProps {}
+export interface PostProps {
+  post: any
+}
 
-export default function PostDetailage(props: PostDetailageProps) {
-  const router = useRouter()
-
+export default function PostCreatePage(props: PostProps) {
   return (
     <>
-      <div>Post Detail Page</div>
-      <p>Query: {JSON.stringify(router.query)}</p>
+      <div>Post Create Page</div>
     </>
   )
 }
