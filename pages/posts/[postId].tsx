@@ -7,6 +7,10 @@ export interface PostProps {
 }
 
 export default function PostDetail({ post }: PostProps) {
+  const router = useRouter()
+  if (router.isFallback) {
+    return <div style={{ fontSize: '2rem', textAlign: 'center' }}>Loading...</div>
+  }
   return (
     <>
       <div>Post Detail Page</div>
@@ -27,7 +31,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
   return {
     paths,
-    fallback: false,
+    fallback: true,
   }
 }
 
@@ -47,5 +51,6 @@ export const getStaticProps: GetStaticProps<PostProps> = async (context: GetStat
     props: {
       post: data,
     },
+    revalidate: 5,
   }
 }

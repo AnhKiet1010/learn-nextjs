@@ -1,3 +1,4 @@
+import { AdminLayout } from '@/components/layout'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
@@ -10,7 +11,6 @@ export interface AboutPageProps {}
 export default function AboutPage(props: AboutPageProps) {
   const router = useRouter()
   const [postList, setPostList] = useState([])
-  console.log('About query : ', router.query)
   const page = router.query?.page
 
   useEffect(() => {
@@ -38,7 +38,7 @@ export default function AboutPage(props: AboutPageProps) {
   }
 
   return (
-    <>
+    <div>
       <Header />
       <div>About Page</div>
       <ul>
@@ -51,9 +51,11 @@ export default function AboutPage(props: AboutPageProps) {
         ))}
       </ul>
       <button onClick={handleNextPage}>next page</button>
-    </>
+    </div>
   )
 }
+
+AboutPage.Layout = AdminLayout
 
 // export const getServerSideProps = () => {
 //   return {
