@@ -1,10 +1,11 @@
 import { AdminLayout } from '@/components/layout'
+import { Box, Typography } from '@mui/material'
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
 
-const Header = dynamic(() => import('@/components/common/Header/index'), { ssr: false })
+const Header = dynamic(() => import('@/components/common'), { ssr: false })
 
 export interface AboutPageProps {}
 
@@ -40,17 +41,21 @@ export default function AboutPage(props: AboutPageProps) {
   return (
     <div>
       <Header />
-      <div>About Page</div>
-      <ul>
-        {postList.map((post: any, idx) => (
-          <li key={idx}>
-            <Link href={`/posts/${post.id}`}>
-              <a>{post.title}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
-      <button onClick={handleNextPage}>next page</button>
+      <Box>
+        <Typography component="h1" variant="h3" color="primary.main">
+          About Page
+        </Typography>
+        <ul>
+          {postList.map((post: any, idx) => (
+            <li key={idx}>
+              <Link href={`/posts/${post.id}`}>
+                <a>{post.title}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <button onClick={handleNextPage}>next page</button>
+      </Box>
     </div>
   )
 }

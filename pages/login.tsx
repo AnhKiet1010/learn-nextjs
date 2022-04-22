@@ -3,7 +3,7 @@ import { useAuth } from '@/hooks'
 import { useRouter } from 'next/router'
 import React from 'react'
 
-export default function loginPage() {
+export default function LoginPage() {
   const router = useRouter()
   const { profile, login } = useAuth({
     revalidateOnMount: false,
