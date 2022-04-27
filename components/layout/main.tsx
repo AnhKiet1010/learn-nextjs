@@ -11,12 +11,6 @@ export function MainLayout({ children }: LayoutProps) {
       <Header />
 
       <Box component="main" flexGrow={1}>
-        <Container maxWidth="sm" sx={{ backgroundColor: 'primary.main' }}>
-          CONATINER
-        </Container>
-        <Container maxWidth="md" sx={{ backgroundColor: 'primary.main' }}>
-          CONATINER
-        </Container>
         {children}
       </Box>
 

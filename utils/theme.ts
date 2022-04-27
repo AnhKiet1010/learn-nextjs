@@ -3,6 +3,9 @@ import { red } from '@mui/material/colors'
 
 // Create a theme instance.
 export const theme = createTheme({
+  typography: {
+    fontFamily: 'Heebo, san-serif',
+  },
   components: {
     MuiContainer: {
       styleOverrides: {
@@ -39,13 +42,23 @@ export const theme = createTheme({
         },
       },
     },
+    MuiButton: {
+      variants: [
+        {
+          props: { variant: 'contained', color: 'primary' },
+          style: {
+            color: 'white',
+          },
+        },
+      ],
+    },
   },
   palette: {
-    mode: 'dark',
     primary: {
       main: '#ff83a9',
     },
     secondary: {
+      light: '#EDF7FA',
       main: '#19857b',
     },
     error: {
