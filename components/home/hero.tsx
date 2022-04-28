@@ -5,7 +5,7 @@ import avatar from '@/images/avatar.png'
 
 export function HeroSection() {
   return (
-    <Box component={`section`} pt={{ xs: 9, md: 18 }} pb={9}>
+    <Box component={`section`} pt={{ xs: 4, md: 18 }} pb={{ xs: 7, md: 9 }}>
       <Container>
         <Stack
           spacing={8}
@@ -13,7 +13,7 @@ export function HeroSection() {
           alignItems={{ xs: 'center', md: 'flex-start' }}
         >
           <Box textAlign={{ xs: 'center', md: 'left' }}>
-            <Typography component="h1" variant="h3" fontWeight="bold" mb={5}>
+            <Typography component="h1" variant="h3" fontWeight="bold" mb={{ xs: 3.5, md: 5 }}>
               Hi, I am John, <br></br>
               Creative Technologist
             </Typography>
@@ -32,7 +32,7 @@ export function HeroSection() {
               borderRadius: '50%',
             }}
           >
-            <Image src={avatar} layout="responsive" alt="avatar" />
+            <Image src={avatar} layout="responsive" alt="avatar" priority />
           </Box>
         </Stack>
       </Container>
