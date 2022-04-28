@@ -1,7 +1,6 @@
 import { LayoutProps } from '@/models/index'
-import { Container, Stack } from '@mui/material'
+import { Stack } from '@mui/material'
 import { Box } from '@mui/system'
-import Link from 'next/link'
 import React from 'react'
 import { Footer, Header } from '../common'
 

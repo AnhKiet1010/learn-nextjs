@@ -1,10 +1,9 @@
 import { Work } from '@/models'
-import { Divider, Box, Link as MuiLink, Stack, Typography, Chip } from '@mui/material'
-import { borderRadius } from '@mui/system'
+import { Box, Chip, Link as MuiLink, Stack, Typography } from '@mui/material'
 import { format } from 'date-fns'
 import Image from 'next/image'
 import Link from 'next/link'
-import React, { Fragment } from 'react'
+import React from 'react'
 
 export interface worksCardInterface {
   work: Work
