@@ -4,7 +4,11 @@ import React from 'react'
 export interface WorksPageProps {}
 
 export default function WorksPage({}: WorksPageProps) {
-  return <div>Works Page</div>
+  return (
+    <main>
+      <h2>Works Page</h2>
+    </main>
+  )
 }
 
 WorksPage.Layout = MainLayout
