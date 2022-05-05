@@ -32,7 +32,9 @@ export function HeaderMobile(props: HeaderMobileProps) {
             <Link key={route.path} href={route.path} passHref>
               <MuiLink
                 sx={{ p: 2, width: 250, textAlign: 'center', fontWeight: 'medium' }}
-                className={clsx({ active: router.pathname === route.path })}
+                className={clsx({
+                  active: router.pathname.split('/')[1] === route.path.split('/')[1],
+                })}
               >
                 {route.label}
               </MuiLink>

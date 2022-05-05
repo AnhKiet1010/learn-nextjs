@@ -1,10 +1,9 @@
 export interface Work {
   id: number | string
   title: string
-  tagList: string[]
-  shortDescription: string
-  fullDescription: string
+  description: string
+  author: string
   createdAt: string
   updatedAt: string
-  image: string
+  imageUrl: string
 }

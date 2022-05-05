@@ -1,44 +1,38 @@
 import { Post, Work } from '@/models'
 import { Box, Container, Typography } from '@mui/material'
 import * as React from 'react'
-import { WorksList } from '../work'
+import { WorksList } from '../works'
 
 export function FeatureWorks() {
   const worksList: Work[] = [
     {
       id: 1,
       title: 'Designing Dashboards',
-      tagList: ['Design', 'Pattern'],
+      author: '',
       createdAt: '1651112188036',
-      shortDescription:
+      description:
         'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-      fullDescription:
-        'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-      image: 'https://picsum.photos/800/800',
+      imageUrl: 'https://picsum.photos/800/800',
       updatedAt: '1651112188036',
     },
     {
       id: 2,
       title: 'Designing Dashboards',
-      tagList: ['Design', 'Pattern'],
       createdAt: '1651112188036',
-      shortDescription:
+      author: '',
+      description:
         'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-      fullDescription:
-        'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-      image: 'https://picsum.photos/800/800',
+      imageUrl: 'https://picsum.photos/800/800',
       updatedAt: '1651112188036',
     },
     {
       id: 3,
       title: 'Designing Dashboards',
-      tagList: ['Design', 'Pattern'],
       createdAt: '1651112188036',
-      shortDescription:
+      author: '',
+      description:
         'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-      fullDescription:
-        'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
-      image: 'https://picsum.photos/800/800',
+      imageUrl: 'https://picsum.photos/800/800',
       updatedAt: '1651112188036',
     },
   ]

@@ -19,7 +19,6 @@ export default function AboutPage(props: AboutPageProps) {
     ;(async () => {
       const response = await fetch(`https://js-post-api.herokuapp.com/api/posts?_page=${page}`)
       const data = await response.json()
-      console.log(data)
 
       setPostList(data.data)
     })()

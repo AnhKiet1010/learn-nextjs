@@ -14,7 +14,7 @@ export function WorksList({ worksList }: WorksListProps) {
         {worksList.map((work) => (
           <Box key={work.id}>
             <WorksCard work={work} />
-            <Divider sx={{ mt: 2, mb: 4, bgColor: '#E0E0E0' }} />
+            <Divider sx={{ my: 5, bgColor: '#E0E0E0' }} />
           </Box>
         ))}
       </Stack>

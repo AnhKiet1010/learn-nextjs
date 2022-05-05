@@ -9,7 +9,7 @@ export function MainLayout({ children }: LayoutProps) {
     <Stack minHeight="100vh">
       <Header />
 
-      <Box component="main" flexGrow={1}>
+      <Box component="main" flexGrow={1} position="relative">
         {children}
       </Box>
 
