@@ -1,38 +1,38 @@
-import { Box, Stack, Link as MuiLink, Typography } from '@mui/material'
-import Image from 'next/image'
+import { Facebook, Instagram, LinkedIn, Twitter } from '@mui/icons-material'
+import { Box, Stack, Link as MuiLink, Typography, Icon } from '@mui/material'
 import React from 'react'
-import FacebookIcon from '@/images/fb.svg'
-import InstaIcon from '@/images/insta.svg'
-import TwitterIcon from '@/images/twitter.svg'
-import LinkedinIcon from '@/images/linkedin.svg'
-import Link from 'next/link'
 
 export interface FooterProps {}
 
 export function Footer(props: FooterProps) {
+  const socialLinks = [
+    {
+      icon: Facebook,
+      url: ''
+    },
+    {
+      icon: Instagram,
+      url: ''
+    },
+    {
+      icon: Twitter,
+      url: ''
+    },
+    {
+      icon: LinkedIn,
+      url: ''
+    }
+  ]
   return (
     <Box component="footer" py={2} textAlign="center" my={4}>
-      <Stack direction={'row'} spacing={2} justifyContent={'center'}>
-        <Link href="/" passHref>
-          <MuiLink>
-            <Image src={FacebookIcon} />
-          </MuiLink>
-        </Link>
-        <Link href="/" passHref>
-          <MuiLink>
-            <Image src={InstaIcon} />
-          </MuiLink>
-        </Link>
-        <Link href="/" passHref>
-          <MuiLink>
-            <Image src={TwitterIcon} />
-          </MuiLink>
-        </Link>
-        <Link href="/" passHref>
-          <MuiLink>
-            <Image src={LinkedinIcon} />
-          </MuiLink>
-        </Link>
+      <Stack direction={'row'} spacing={4} justifyContent={'center'}>
+        {
+          socialLinks.map((link, idx) => (
+            <Box component='a' href={link.url} target="_blank" key={idx} rel="noopener noreferrer">
+              <Icon component={link.icon} sx={{fontSize: '48px'}} />
+            </Box>
+          ))
+        }
       </Stack>
       <Typography variant="body1" mt={1.5}>
         Copyright ©2020 All rights reserved{' '}
