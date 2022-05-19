@@ -1,5 +1,5 @@
 import { Facebook, Instagram, LinkedIn, Twitter } from '@mui/icons-material'
-import { Box, Stack, Link as MuiLink, Typography, Icon } from '@mui/material'
+import { Box, Stack, Typography, Icon } from '@mui/material'
 import React from 'react'
 
 export interface FooterProps {}
