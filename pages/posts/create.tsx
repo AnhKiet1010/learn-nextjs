@@ -4,7 +4,7 @@ export interface PostProps {
   post: any
 }
 
-export default function PostCreatePage(props: PostProps) {
+export default function PostCreatePage() {
   return (
     <>
       <div>Post Create Page</div>

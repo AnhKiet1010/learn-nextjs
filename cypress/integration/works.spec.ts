@@ -6,7 +6,7 @@ describe('Works Page', () => {
     cy.visit('/works')
 
     // The new page should contain an h1 with "About page"
-    cy.get('h2').contains('Works Page')
+    cy.get('h2').contains('Work')
   })
 })
 

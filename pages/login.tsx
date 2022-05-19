@@ -5,7 +5,7 @@ import React from 'react'
 
 export default function LoginPage() {
   const router = useRouter()
-  const { profile, login } = useAuth({
+  const { login } = useAuth({
     revalidateOnMount: false,
   })
 
