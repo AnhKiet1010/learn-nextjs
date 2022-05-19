@@ -10,7 +10,7 @@ import { theme } from '@/utils'
 
 export interface HeaderDesktopProps {}
 
-export function HeaderDesktop(props: HeaderDesktopProps) {
+export function HeaderDesktop() {
   const router = useRouter()
 
   return (

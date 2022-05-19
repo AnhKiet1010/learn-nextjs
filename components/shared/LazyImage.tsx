@@ -1,4 +1,5 @@
 import { Box } from '@mui/material'
+import Image from 'next/image'
 import React, { useRef } from 'react'
 import LazyLoad from 'react-lazyload'
 
@@ -35,7 +36,7 @@ const LazyImage: React.FC<Props> = ({ src, alt }) => {
         </svg>
       </Box>
       <LazyLoad offset={200}>
-        <img
+        <Image
           src={src}
           alt={alt}
           onLoad={removePlaceholder}

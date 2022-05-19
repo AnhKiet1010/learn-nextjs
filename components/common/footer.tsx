@@ -4,35 +4,33 @@ import React from 'react'
 
 export interface FooterProps {}
 
-export function Footer(props: FooterProps) {
+export function Footer() {
   const socialLinks = [
     {
       icon: Facebook,
-      url: ''
+      url: '',
     },
     {
       icon: Instagram,
-      url: ''
+      url: '',
     },
     {
       icon: Twitter,
-      url: ''
+      url: '',
     },
     {
       icon: LinkedIn,
-      url: ''
-    }
+      url: '',
+    },
   ]
   return (
     <Box component="footer" py={2} textAlign="center" my={4}>
       <Stack direction={'row'} spacing={4} justifyContent={'center'}>
-        {
-          socialLinks.map((link, idx) => (
-            <Box component='a' href={link.url} target="_blank" key={idx} rel="noopener noreferrer">
-              <Icon component={link.icon} sx={{fontSize: '48px'}} />
-            </Box>
-          ))
-        }
+        {socialLinks.map((link, idx) => (
+          <Box component="a" href={link.url} target="_blank" key={idx} rel="noopener noreferrer">
+            <Icon component={link.icon} sx={{ fontSize: '48px' }} />
+          </Box>
+        ))}
       </Stack>
       <Typography variant="body1" mt={1.5}>
         Copyright ©2020 All rights reserved{' '}

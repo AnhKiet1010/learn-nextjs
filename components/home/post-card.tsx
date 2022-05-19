@@ -10,7 +10,7 @@ export interface PostCardInterface {
 
 export function PostsCard({ post }: PostCardInterface) {
   if (!post) return null
-  const { id, title, publishDate, tagList, description } = post
+  const { id, title, tagList, description } = post
   return (
     <Card
       component="section"

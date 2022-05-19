@@ -9,7 +9,7 @@ import Image from 'next/image'
 
 export interface HeaderMobileProps {}
 
-export function HeaderMobile(props: HeaderMobileProps) {
+export function HeaderMobile() {
   const router = useRouter()
   const [openMenu, setOpenMenu] = useState(false)
 
@@ -22,7 +22,7 @@ export function HeaderMobile(props: HeaderMobileProps) {
       <Container>
         <Stack direction="row" justifyContent="flex-end">
           <Button onClick={toggleDrawer}>
-            <Image src={menuIcon} />
+            <Image src={menuIcon} alt="menu-icon" />
           </Button>
         </Stack>
       </Container>

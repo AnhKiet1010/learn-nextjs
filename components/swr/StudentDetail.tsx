@@ -7,7 +7,7 @@ interface StudentDetailProps {
 }
 
 export function StudentDetail({ studentId }: StudentDetailProps) {
-  const { data, error, mutate, isValidating } = useSWR(`/students/${studentId}`, {
+  const { data, mutate } = useSWR(`/students/${studentId}`, {
     revalidateOnFocus: false,
     dedupingInterval: 60 * 60 * 1000,
   })

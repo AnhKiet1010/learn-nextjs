@@ -14,7 +14,7 @@ interface WorksDetailProps {}
 export default function WorksDetail({}: WorksDetailProps) {
   const router = useRouter()
   const { worksId } = router.query
-  const { data, error, mutate, isValidating } = useSWR(`/posts/${worksId}`, {
+  const { data, error } = useSWR(`/posts/${worksId}`, {
     revalidateOnFocus: false,
     dedupingInterval: 60 * 60 * 1000,
   })

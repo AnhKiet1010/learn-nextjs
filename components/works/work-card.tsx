@@ -11,7 +11,7 @@ export interface worksCardInterface {
 
 export function WorksCard({ work }: worksCardInterface) {
   if (!work) return null
-  const { id, title, author, description, createdAt, updatedAt, imageUrl } = work
+  const { id, title, author, description, createdAt, imageUrl } = work
   return (
     <Box
       sx={{

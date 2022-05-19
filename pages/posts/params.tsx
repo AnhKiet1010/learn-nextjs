@@ -2,7 +2,7 @@ import React from 'react'
 
 export interface ParamsProps {}
 
-export default function ParamsPage(props: ParamsProps) {
+export default function ParamsPage() {
   return (
     <>
       <div>Params Page</div>

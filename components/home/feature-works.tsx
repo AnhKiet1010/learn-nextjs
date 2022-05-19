@@ -1,4 +1,4 @@
-import { Post, Work } from '@/models'
+import { Work } from '@/models'
 import { Box, Container, Typography } from '@mui/material'
 import * as React from 'react'
 import { WorksList } from '../works'
