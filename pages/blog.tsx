@@ -6,7 +6,7 @@ export interface BlogPageProps {
 }
 
 export default function BlogPage({}: BlogPageProps) {
-  return <div>Blog Page</div>
+  return <div>Blog Page 123</div>
 }
 
 BlogPage.Layout = MainLayout
